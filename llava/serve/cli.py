@@ -14,6 +14,11 @@ from PIL import Image
 from io import BytesIO
 from transformers import TextStreamer
 
+import os 
+os.environ['http_proxy'] = 'http://127.0.0.1:34780'
+os.environ['https_proxy'] = 'http://127.0.0.1:34780'
+os.environ['all_proxy'] ='socks5://127.0.0.1:34780'
+
 
 def load_image(image_file):
     if image_file.startswith('http://') or image_file.startswith('https://'):

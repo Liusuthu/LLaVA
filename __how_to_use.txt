@@ -1,0 +1,9 @@
+# 围绕一张照片单轮对话
+CUDA_VISIBLE_DEVICES=1 python llava-demo.py
+
+# 围绕一张照片多轮对话
+CUDA_VISIBLE_DEVICES=1 python -m llava.serve.cli --model-path liuhaotian/llava-v1.5-7b --image-file "https://llava-vl.github.io/static/images/view.jpg" --load-4bit
+
+# 微调模型
+bash finetune_task_custom.sh
+bash finetune_task_custom_lora.sh
