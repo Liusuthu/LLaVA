@@ -7,3 +7,6 @@ CUDA_VISIBLE_DEVICES=1 python -m llava.serve.cli --model-path liuhaotian/llava-v
 # 微调模型(基于llava)
 bash finetune_task_custom.sh
 bash finetune_task_custom_lora.sh
+
+# 合并权重
+bash merge.sh

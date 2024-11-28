@@ -1,6 +1,6 @@
 #!/bin/bash
 
-deepspeed --include localhost:1,2 llava/train/train_mem.py \
+deepspeed llava/train/train_mem.py \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path liuhaotian/llava-v1.5-13b \
     --version v1 \
